@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button.jsx'
 
 //something called prop types that can be used to make your code more robust, think defensive programming perhaps?
 import PropTypes from 'prop-types'
@@ -10,7 +11,8 @@ const Header = ({ title }) => {
     <header className='header'>
         {/* inline styling requires double {{}} */}
         <h1>{title}</h1>
-        <button className='btn'>Add</button>
+        {/* changed button into own component, imported and added it to return statement in Header component */}
+        <Button />
     </header>
   )
 }
