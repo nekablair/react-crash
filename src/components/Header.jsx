@@ -1,5 +1,9 @@
 import React from 'react'
 
+//something called prop types that can be used to make your code more robust, think defensive programming perhaps?
+import PropTypes from 'prop-types'
+
+
 // props is just an object of whatever we pass in, so we can destructure
 const Header = ({ title }) => {
   return (
@@ -11,6 +15,10 @@ const Header = ({ title }) => {
 // example of default props use
 Header.defaultProps = {
     title: 'Task Tracker'
+}
+
+Header.PropTypes = {
+    title: PropTypes.string
 }
 
 export default Header
