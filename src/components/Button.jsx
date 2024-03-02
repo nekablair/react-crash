@@ -4,8 +4,14 @@ import PropTypes from 'prop-types'
 //destructuring happening below
 const Button = ({ color, text }) => {
     // because we are destructuring, we are bringing in the props from Header that's set on the Button component in the parent Header element, in this case color and text
+
+    const onClick = () => {
+        console.log("click")
+    }
+
+
   return (
-    <button style={{backgroundColor: color}} className='btn'>{text}</button>
+    <button onClick={onClick} style={{backgroundColor: color}} className='btn'>{text}</button>
   )
 }
 
