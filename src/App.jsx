@@ -11,8 +11,7 @@ function App() {
     //can only have one parent element, hence <> </>
     <>
       <div className='container'>
-        {/* because we are trying to insert a number, instead of a string using proptypes, we get this output in console: Warning: Failed prop type: Invalid prop `title` of type `number` supplied to `Header`, expected `string`*/}
-        <Header title={1} />
+        <Header />
       </div>
         
     </>
