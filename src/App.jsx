@@ -12,7 +12,7 @@ function App() {
     <>
       <div className='container'>
         {/* can use default props */}
-        <Header title='Overriding Default Props' />
+        <Header />
       </div>
         
     </>
