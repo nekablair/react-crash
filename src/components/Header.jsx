@@ -12,7 +12,10 @@ const Header = ({ title }) => {
         {/* inline styling requires double {{}} */}
         <h1>{title}</h1>
         {/* changed button into own component, imported and added it to return statement in Header component */}
-        <Button />
+        <Button color='green' text= 'Hello' />
+        {/* we can use these as reusable components, this would be thinking in react terms, what can be used in several different places in the most simple way */}
+        <Button color='blue' text= 'Hello 1' />
+        <Button color='red' text= 'Hello 2' />
     </header>
   )
 }

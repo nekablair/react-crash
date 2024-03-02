@@ -1,8 +1,9 @@
 import React from 'react'
-
-const Button = () => {
+//destructuring happening below
+const Button = ({ color, text }) => {
+    // because we are destructuring, we are bringing in the props from Header that's set on the Button component in the parent Header element, in this case color and text
   return (
-    <button className='btn'>Add</button>
+    <button style={{backgroundColor: color}} className='btn'>{text}</button>
   )
 }
 
