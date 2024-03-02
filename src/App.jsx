@@ -11,7 +11,8 @@ function App() {
     //can only have one parent element, hence <> </>
     <>
       <div className='container'>
-        <Header title='Hello'/>
+        {/* can use default props */}
+        <Header />
       </div>
         
     </>
