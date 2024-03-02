@@ -17,7 +17,7 @@ Header.defaultProps = {
     title: 'Task Tracker'
 }
 
-Header.PropTypes = {
+Header.propTypes = {
     title: PropTypes.string
 }
 
