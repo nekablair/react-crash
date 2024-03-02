@@ -5,7 +5,7 @@ function App() {
   // components can functions or classes
   const [count, setCount] = useState(0)
   const name = "Brad"
-  const x = true
+  const x = false
 
   return (
     // looks like html, but it's JSX
