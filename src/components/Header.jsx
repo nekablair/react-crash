@@ -7,9 +7,10 @@ import PropTypes from 'prop-types'
 // props is just an object of whatever we pass in, so we can destructure
 const Header = ({ title }) => {
   return (
-    <header>
+    <header className='header'>
         {/* inline styling requires double {{}} */}
         <h1>{title}</h1>
+        <button className='btn'>Add</button>
     </header>
   )
 }
