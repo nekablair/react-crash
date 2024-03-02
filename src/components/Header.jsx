@@ -1,8 +1,10 @@
 import React from 'react'
-//rafce arrow function exports at bottom
+
 const Header = () => {
   return (
-    <div>Header</div>
+    <header>
+        <h1>Task Tracker</h1>
+    </header>
   )
 }
 
