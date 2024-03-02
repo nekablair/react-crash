@@ -7,12 +7,17 @@ import PropTypes from 'prop-types'
 
 // props is just an object of whatever we pass in, so we can destructure
 const Header = ({ title }) => {
+//this is getting passed as a prop, see below with Button component
+    const onClick = () => {
+        console.log("Click")
+    }
+
   return (
     <header className='header'>
         {/* inline styling requires double {{}} */}
         <h1>{title}</h1>
         {/* changed button into own component, imported and added it to return statement in Header component */}
-        <Button color='green' text= 'Add' />
+        <Button color='green' text= 'Add' onClick={onClick} />
         {/* we can use these as reusable components, this would be thinking in react terms, what can be used in several different places in the most simple way */}
     </header>
   )
