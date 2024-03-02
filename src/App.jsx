@@ -11,8 +11,7 @@ function App() {
     //can only have one parent element, hence <> </>
     <>
       <div className='container'>
-        <Header />
-        <h1>Hello From React</h1>
+        <Header title='Hello'/>
       </div>
         
     </>
