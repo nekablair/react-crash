@@ -9,7 +9,7 @@ const Header = ({ title }) => {
   return (
     <header>
         {/* inline styling requires double {{}} */}
-        <h1 style={headingStyle}>{title}</h1>
+        <h1>{title}</h1>
     </header>
   )
 }
@@ -18,10 +18,11 @@ Header.defaultProps = {
     title: 'Task Tracker'
 }
 
-const headingStyle = {
-    color: 'red',
-    backgroundColor: 'black',
-}
+//css in js
+// const headingStyle = {
+//     color: 'red',
+//     backgroundColor: 'black',
+// }
 
 Header.propTypes = {
     title: PropTypes.string.isRequired
