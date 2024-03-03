@@ -1,8 +1,8 @@
 import React from 'react'
+import { useState } from 'react'
 
 const Tasks = () => {
-
-    const tasks = [
+    const [tasks, setTasks] = useState([
         {
             id: 1,
             text: 'Grocery Shopping',
@@ -21,7 +21,7 @@ const Tasks = () => {
             day: 'Feb 28th at 5:00pm',
             reminder: false
         }
-    ]
+    ])
 
   return (
     <>
