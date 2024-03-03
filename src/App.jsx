@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 import Header from './components/Header.jsx'
+import Tasks from './components/Tasks.jsx'
 
 function App() {
   // components can functions or classes
@@ -12,6 +13,7 @@ function App() {
     <>
       <div className='container'>
         <Header />
+        <Tasks />
       </div>
         
     </>
