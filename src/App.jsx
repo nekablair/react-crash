@@ -45,7 +45,7 @@ const addTask = (id) => {
       <div className='container'>
         <Header />
         {/* because the button is actually in Tasks.jsx, we have to pass it down to that component, as a prop */}
-        <Tasks  tasks={tasks} onDelete={deleteTask}/>
+        {tasks.length > 0 ? <Tasks  tasks={tasks} onDelete={deleteTask} /> : "No Tasks to Show"}
       </div>
         
     </>
