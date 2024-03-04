@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import Header from './components/Header.jsx'
 import Tasks from './components/Tasks.jsx'
+import AddTask from './components/AddTask.jsx'
 
 function App() {
   // now part of app component state, can now use a props so every other component has access to it
@@ -49,6 +50,7 @@ const addTask = (id) => {
     <>
       <div className='container'>
         <Header />
+        <AddTask />
         {/* because the button is actually in Tasks.jsx, we have to pass it down to that component, as a prop */}
         {tasks.length > 0 ? <Tasks  tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : "No Tasks to Show"}
       </div>

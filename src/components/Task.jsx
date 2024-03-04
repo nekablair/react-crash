@@ -7,6 +7,7 @@ import { FaTimes, FaPlus } from 'react-icons/fa'
 const Task = ({ task, onDelete, onToggle }) => {
   return (
     <>
+    {/* this task is coming down from our parent state */}
         <div className = {`task ${task.reminder ? 'reminder' : ''}`} onDoubleClick={() => 
           onToggle(task.id)}>
     {/* getting only the task id instead of the entire event that comes with click         */}
