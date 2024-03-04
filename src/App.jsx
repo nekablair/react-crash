@@ -32,6 +32,11 @@ const deleteTask = (id) => {
   setTasks(tasks.filter((task) => task.id !== id))
 }
 
+//toggle reminder on task
+const toggleReminder = (id) => {
+  // setTasks(reminder) === true ? false : true
+  setTasks(tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder } : task))
+}
 
 //add task
 const addTask = (id) => {
@@ -45,7 +50,7 @@ const addTask = (id) => {
       <div className='container'>
         <Header />
         {/* because the button is actually in Tasks.jsx, we have to pass it down to that component, as a prop */}
-        {tasks.length > 0 ? <Tasks  tasks={tasks} onDelete={deleteTask} /> : "No Tasks to Show"}
+        {tasks.length > 0 ? <Tasks  tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : "No Tasks to Show"}
       </div>
         
     </>
