@@ -6,7 +6,6 @@ const Task = () => {
         <div className = 'task'>
             <h3>My Task</h3>
         </div>
-        </h1>
     </>
   )
 }
