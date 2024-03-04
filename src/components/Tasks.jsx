@@ -1,5 +1,5 @@
 import React from 'react'
-import Task from './components/Task.jsx'
+import Task from './Task.jsx'
 
 //          destructuring
 const Tasks = ({ tasks }) => { 
@@ -7,7 +7,7 @@ const Tasks = ({ tasks }) => {
   return (
     <>
        {tasks.map((task) => (
-       <Task key={task.id}>{task.text}</Task>
+       <Task key={task.id} task={task}/>
        ))} 
     </>
   )
