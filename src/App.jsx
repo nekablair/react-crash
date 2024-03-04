@@ -27,13 +27,20 @@ function App() {
     }
 ])
 
+//delete task
+const deleteTask = (id) => {
+  console.log('delete', id)
+}
+
+
   return (
     // looks like html, but it's JSX
     //can only have one parent element, hence <> </>
     <>
       <div className='container'>
         <Header />
-        <Tasks  tasks={tasks}/>
+        {/* because the button is actually in Tasks.jsx, we have to pass it down to that component, as a prop */}
+        <Tasks  tasks={tasks} onDelete={deleteTask}/>
       </div>
         
     </>
