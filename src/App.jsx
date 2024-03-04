@@ -33,6 +33,11 @@ const deleteTask = (id) => {
 }
 
 
+//add task
+const addTask = (id) => {
+  console.log('add', id)
+}
+
   return (
     // looks like html, but it's JSX
     //can only have one parent element, hence <> </>
