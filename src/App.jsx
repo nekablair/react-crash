@@ -50,7 +50,7 @@ const toggleReminder = (id) => {
     //can only have one parent element, hence <> </>
     <>
       <div className='container'>
-        <Header onAdd={() => setShowAddTask(!showAddTask)} />
+        <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
         {/* (just checking to see if it's true, if so do <AddTask> and if not, do nothing)shorter way to do ternary without else using && */}
         {showAddTask && <AddTask onAdd={addTask} />}
         {/* because the button is actually in Tasks.jsx, we have to pass it down to that component, as a prop */}
