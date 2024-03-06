@@ -11,14 +11,11 @@ const Header = ({ title, onAdd, showAdd }) => {
     
   return (
     <header className='header'>
-        {/* inline styling requires double {{}} */}
         <h1>{title}</h1>
-        {/* changed button into own component, imported and added it to return statement in Header component */}
         <Button 
             color={showAdd ? 'red' : 'green'} 
             text={showAdd ? 'Close': 'Add' } 
             onClick={onAdd} />
-        {/* we can use these as reusable components, this would be thinking in react terms, what can be used in several different places in the most simple way */}
     </header>
   )
 }
