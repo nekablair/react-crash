@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import Header from './components/Header.jsx'
 import Tasks from './components/Tasks.jsx'
@@ -6,7 +6,7 @@ import AddTask from './components/AddTask.jsx'
 
 function App() {
   // now part of app component state, can now use a props so every other component has access to it
-
+  const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([
     {
         id: 1,
@@ -28,6 +28,13 @@ function App() {
     }
 ])
 
+//add task
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 10000) + 1
+    const newTask = { id, ...task }
+    setTasks([ ...tasks, newTask])
+  }
+
 //delete task
 const deleteTask = (id) => {
   setTasks(tasks.filter((task) => task.id !== id))
@@ -35,13 +42,7 @@ const deleteTask = (id) => {
 
 //toggle reminder on task
 const toggleReminder = (id) => {
-  // setTasks(reminder) === true ? false : true
   setTasks(tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder } : task))
-}
-
-//add task
-const addTask = (id) => {
-  console.log('add', id)
 }
 
   return (
@@ -50,7 +51,8 @@ const addTask = (id) => {
     <>
       <div className='container'>
         <Header />
-        <AddTask />
+        {/* (just checking to see if it's true, if so do <AddTask> and if not, do nothing)shorter way to do ternary without else using && */}
+        {showAddTask && <AddTask onAdd={addTask} />}
         {/* because the button is actually in Tasks.jsx, we have to pass it down to that component, as a prop */}
         {tasks.length > 0 ? <Tasks  tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : "No Tasks to Show"}
       </div>
